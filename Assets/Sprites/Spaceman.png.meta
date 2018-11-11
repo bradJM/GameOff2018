@@ -3,7 +3,11 @@ guid: 279c658f03262174f8e8f474347da723
 TextureImporter:
   fileIDToRecycleName:
     21300000: Spaceman_Idle
-    21300002: Spaceman_Jump
+    21300002: Spaceman_Duck
+    21300004: Spaceman_Attack
+    21300006: Spaceman_Walk_1
+    21300008: Spaceman_Walk_2
+    21300010: Spaceman_Jump
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -93,14 +97,94 @@ TextureImporter:
         y: 0
         width: 10
         height: 14
-      alignment: 9
+      alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 799eaf0bd49543346bcc22a462586fbe
+      spriteID: ba745e4a5ab157744a46feea42a75803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceman_Duck
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1151ba9787c52ef4bb57b09916e4b745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceman_Attack
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 0
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e0f19499327cc54c80bc0202d5007e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceman_Walk_1
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 0
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b10f9beb357f7343b08c838511f521f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spaceman_Walk_2
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 0
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d4a68650b1edff4e8454da42b46af2e
       vertices: []
       indices: 
       edges: []
@@ -109,18 +193,18 @@ TextureImporter:
       name: Spaceman_Jump
       rect:
         serializedVersion: 2
-        x: 10
+        x: 50
         y: 0
         width: 10
         height: 14
-      alignment: 9
+      alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8ab9aa3e06ca6e4cb2fcb5a61b8c5fe
+      spriteID: 6e2ed59ddc7a3be4caa5d97db80aefc8
       vertices: []
       indices: 
       edges: []
@@ -128,7 +212,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c62b2a45725855848beadd8f6f2cb9c3
+    spriteID: 870b5af62b88f9344abbb764974282f5
     vertices: []
     indices: 
     edges: []
