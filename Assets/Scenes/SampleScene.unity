@@ -409,7 +409,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &1941794717
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -423,7 +423,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.25, y: 1.75}
+  m_Size: {x: 1, y: 1.5}
   m_Direction: 0
 --- !u!114 &1941794718
 MonoBehaviour:
@@ -436,9 +436,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3889ab1db9206614b8d43c1dba2d0061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WalkingSpeed: 5
+  MoveForceX: 200
+  MaxSpeedX: 8
+  JumpForce: 600
   Facing: 1
   Animator: {fileID: 0}
+  Rigidbody: {fileID: 0}
 --- !u!95 &1941794719
 Animator:
   serializedVersion: 3
