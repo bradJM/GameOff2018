@@ -25,6 +25,11 @@ namespace Player.State
                 player.Rigidbody.AddForce(new Vector2(0, player.JumpForce));
             }
 
+            if (!Input.GetButton("Jump"))
+            {
+                this.ApplyGravityBoost(player);
+            }
+
             _reachedApex = player.Rigidbody.velocity.y < 0;
         }
     }

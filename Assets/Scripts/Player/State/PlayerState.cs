@@ -22,5 +22,9 @@
         public abstract PlayerState HandleInput();
 
         public abstract void UpdatePhysics(Player player);
+
+        protected void ApplyGravityBoost(Player player, float boost=1.6f) {
+            player.Rigidbody.velocity += Vector2.up * Physics2D.gravity.y * boost * Time.deltaTime;
+        }
     }
 }

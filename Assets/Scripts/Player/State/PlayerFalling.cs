@@ -20,11 +20,7 @@ namespace Player.State
 
         public override void UpdatePhysics(Player player)
         {
-            if (player.Rigidbody.velocity.y < 0 || !Input.GetButton("Jump"))
-            {
-                player.Rigidbody.velocity += Vector2.up * Physics2D.gravity.y * 1.6f * Time.deltaTime;
-            }
-
+            this.ApplyGravityBoost(player);
             _reachedGround = player.OnGround();
         }
     }
