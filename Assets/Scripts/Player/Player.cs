@@ -6,11 +6,11 @@ namespace Player
     public class Player : MonoBehaviour
     {
         [Header("Set in Inspector")]
-        public float MoveForceX = 200;
+        public float MoveForceX = 100f;
 
-        public float MaxSpeedX = 8;
+        public float MaxSpeedX = 10f;
 
-        public float JumpForce = 600;
+        public float JumpForce = 10f;
 
         [Header("Set Dynamically")]
         public PlayerState State = PlayerState.Standing;
