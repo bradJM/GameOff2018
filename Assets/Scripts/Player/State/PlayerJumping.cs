@@ -30,6 +30,7 @@ namespace Player.State
                 this.ApplyGravityBoost(player);
             }
 
+            this.HandleHorizontalInput(player, boost: 0.15f);
             _reachedApex = player.Rigidbody.velocity.y < 0;
         }
     }
