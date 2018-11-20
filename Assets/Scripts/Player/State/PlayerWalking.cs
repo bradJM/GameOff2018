@@ -4,6 +4,8 @@ namespace Player.State
 {
     public class PlayerWalking : PlayerState
     {
+        private bool onGround;
+
         public override void Enter(Player player)
         {
             player.Animator.CrossFade("Player_Walk", 0);
@@ -14,6 +16,11 @@ namespace Player.State
         {
             var horizontal = Input.GetAxis(Axis.Horizontal);
             var vertical = Input.GetAxis(Axis.Vertical);
+
+            if (!onGround)
+            {
+                return Falling;
+            }
 
             if (Input.GetButtonDown("Jump"))
             {
@@ -31,6 +38,7 @@ namespace Player.State
         public override void UpdatePhysics(Player player)
         {
             this.HandleHorizontalInput(player);
+            this.onGround = player.OnGround();
         }
     }
 }
