@@ -22,9 +22,15 @@ namespace Player.State
         {
             if (Mathf.Approximately(player.Rigidbody.velocity.y, 0) && player.OnGround())
             {
-                player.Rigidbody.AddForce(new Vector2(0, player.JumpForce));
+                player.Rigidbody.AddForce(new Vector2(0, player.JumpForce), ForceMode2D.Impulse);
             }
 
+            if (!Input.GetButton("Jump"))
+            {
+                ApplyGravityBoost(player);
+            }
+
+            HandleHorizontalInput(player, boost: 0.15f);
             _reachedApex = player.Rigidbody.velocity.y < 0;
         }
     }

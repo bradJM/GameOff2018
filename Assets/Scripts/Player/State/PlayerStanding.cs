@@ -30,7 +30,7 @@ namespace Player.State
 
         public override void UpdatePhysics(Player player)
         {
-            player.Rigidbody.velocity = new Vector2(player.Rigidbody.velocity.x * 0.9f, player.Rigidbody.velocity.y);
+            player.Rigidbody.velocity = new Vector2(player.Rigidbody.velocity.x * 0.8f, player.Rigidbody.velocity.y);
         }
     }
 }
