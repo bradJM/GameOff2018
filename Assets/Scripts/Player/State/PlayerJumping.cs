@@ -27,10 +27,10 @@ namespace Player.State
 
             if (!Input.GetButton("Jump"))
             {
-                this.ApplyGravityBoost(player);
+                ApplyGravityBoost(player);
             }
 
-            this.HandleHorizontalInput(player, boost: 0.15f);
+            HandleHorizontalInput(player, boost: 0.15f);
             _reachedApex = player.Rigidbody.velocity.y < 0;
         }
     }

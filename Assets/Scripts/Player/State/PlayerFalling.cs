@@ -20,8 +20,8 @@ namespace Player.State
 
         public override void UpdatePhysics(Player player)
         {
-            this.ApplyGravityBoost(player);
-            this.HandleHorizontalInput(player, boost: 0.15f);
+            ApplyGravityBoost(player);
+            HandleHorizontalInput(player, boost: 0.15f);
             _reachedGround = player.OnGround();
         }
     }
