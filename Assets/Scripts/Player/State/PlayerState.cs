@@ -9,6 +9,7 @@ namespace Player.State
         protected static readonly PlayerState Jumping;
         protected static readonly PlayerState Falling;
         protected static readonly PlayerState Ducking;
+        protected static readonly PlayerState Shooting;
 
         static PlayerState()
         {
@@ -17,6 +18,7 @@ namespace Player.State
             Jumping = new PlayerJumping();
             Falling = new PlayerFalling();
             Ducking = new PlayerDucking();
+            Shooting = new PlayerShooting();
         }
 
         public abstract void Enter(Player player);
@@ -25,14 +27,16 @@ namespace Player.State
 
         public abstract void UpdatePhysics(Player player);
 
-        protected void ApplyGravityBoost(Player player, float boost=1.6f) {
+        protected void ApplyGravityBoost(Player player, float boost = 1.6f)
+        {
             player.Rigidbody.velocity += Vector2.up * Physics2D.gravity.y * boost * Time.deltaTime;
         }
 
-        protected void HandleHorizontalInput(Player player, float boost=1f) {
+        protected void HandleHorizontalInput(Player player, float boost = 1f)
+        {
             var horizontal = Input.GetAxis(Axis.Horizontal);
 
-            // If the player is changing direction  or hasn't reached MaxSpeedX yet
+            // If the player is changing direction or hasn't reached MaxSpeedX yet
             if (horizontal * player.Rigidbody.velocity.x < player.MaxSpeedX)
             {
                 player.Rigidbody.AddForce(Vector2.right * horizontal * boost * player.MoveForceX);
@@ -54,8 +58,6 @@ namespace Player.State
                 Utils.Flip(player.transform);
                 player.Facing = Facing.Right;
             }
-
         }
-
     }
 }
