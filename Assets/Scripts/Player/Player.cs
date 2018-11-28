@@ -12,6 +12,10 @@ namespace Player
 
         public float JumpForce = 10f;
 
+        public float WeaponCooldownTime = 1f;
+
+        public GameObject ProjectilePrefab;
+
         [Header("Set Dynamically")]
         public PlayerState State = PlayerState.Standing;
 
@@ -22,6 +26,8 @@ namespace Player
         public Collider2D Collider;
 
         public Rigidbody2D Rigidbody;
+
+        public float LastShotTime;
 
         private float _distanceToGround;
 
@@ -60,6 +66,11 @@ namespace Player
             var cast = Physics2D.Raycast(transform.position, -Vector2.up, _distanceToGround + 0.1f);
 
             return cast.collider != null;
+        }
+
+        public GameObject SpawnProjectile()
+        {
+            return Instantiate(ProjectilePrefab);
         }
     }
 }

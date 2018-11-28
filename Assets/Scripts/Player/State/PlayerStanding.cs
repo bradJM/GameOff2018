@@ -15,6 +15,11 @@ namespace Player.State
             var horizontal = Input.GetAxis(Axis.Horizontal);
             var vertical = Input.GetAxis(Axis.Vertical);
 
+            if (Input.GetButtonDown("Fire1"))
+            {
+                return Shooting;
+            }
+
             if (Input.GetButtonDown("Jump"))
             {
                 return Jumping;
