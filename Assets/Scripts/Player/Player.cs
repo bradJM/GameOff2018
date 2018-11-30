@@ -34,7 +34,7 @@ namespace Player
         private void Awake()
         {
             Animator = GetComponent<Animator>();
-            Collider = GetComponent<Collider2D>();
+            Collider = GetComponent<CapsuleCollider2D>();
             Rigidbody = GetComponent<Rigidbody2D>();
         }
 
